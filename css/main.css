@@ -116,7 +116,7 @@ nav {
 }
 
 .jumbotron {
-  background-image: url("/img/jumboground.jpg");
+  background-image: url("../img/jumboground.jpg");
   background-size: 1200px 600px;
   height: 600px;
 }
