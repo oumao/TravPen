@@ -10,6 +10,10 @@
   height: 100%;
 }
 
+.carousel-caption p {
+  font-size: 18px;
+}
+
 /**********************
 /***** Services *******
 /*********************/
@@ -117,25 +121,44 @@ nav {
 
 .jumbotron {
   background-image: url("../img/jumboground.jpg");
-  background-size: 1200px 600px;
-  height: 600px;
+  background-repeat: no-repeat;
+  background-size: 1600px 700px;
+  height: 700px;
+}
+
+#backg {
+  background: rgb(207, 201, 201);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+#backg p {
+  font-size: 18px;
+  font-weight: none;
+  color: black;
+}
+
+#backg h4 {
+  font-size: 25px;
+  font-size: bold;
+  color: black;
 }
 
 .jumbotron .container {
   position: relative;
-  top: 60px;
+  top: 100px;
 }
 
 .jumbotron .container h1 {
   color: white;
   font-weight: bold;
-  font-size: 600;
+  font-size: 90px;
 }
 
 .jumbotron .container p {
   color: white;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 30px;
   font-style: italic;
 }
 

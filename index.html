@@ -42,17 +42,53 @@
       <li class="nav-item">
        <a class="nav-link" href="#">CONTACTS</a>
       </li>
-  
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="modal" data-target="#booking">BOOK HERE</a>
+       </li>
       <!-- Dropdown -->
-      <div class="dropdown show">
-        <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          BOOKINGS
-        </a>
       
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-          <a class="dropdown-item" href="#">FLIGHTS</a>
-          <a class="dropdown-item" href="#">BUSES</a>
+      <div class="modal fade" id="booking" tabindex="-1" role="dialog" aria-labelledby="bookingLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Book Here</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="departure">From</label>
+                    <input type="text" class="form-control" placeholder="Current Location">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="destination">To</label>
+                    <input type="text" class="form-control" placeholder="Destination">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputAddress">Address</label>
+                  <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-12">
+                    <label for="date">Date</label>
+                    <input type="date" class="form-control">
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Search for Trip Details</button>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Proceed</button>
+            </div>
+          </div>
         </div>
+      </div>
+        
       </div>
     </ul>
   </nav>
@@ -65,7 +101,18 @@
       <div class="container">
         <h1 class="display-3">Travel the World!</h1>
         <p>Wherever you go , go with all your heart.</p>
-        <button class="button" href="#" role="button"><span>Learn more</span> </button>
+        <button class="button" href="#" role="button" data-toggle="collapse" data-target="#backg" aria-expanded="false" aria-controls="backg">
+          <span>Learn more</span>
+        </button>
+        <br><br>
+        <div id="backg">
+          <h4>Plan for the trip</h4>
+          <p>Research by digging into information about the area you intend to visit.</p>
+          <h4>Transport and accommodation</h4>
+          <p>Double-check whether you need a ticket out of that country before they let you in.</p>
+          <h4>Consider reviews of other travelers</h4>
+          <p>Checking on reviews would give you an idea of the places you might want to visit or those that you should avoid.</p>
+        </div>
       </div>
     </div>
             <!-- AboutUs section -->
@@ -75,25 +122,22 @@
           <div>
             <h3>Who we are: </h3>
             <p class="mb-2 text-muted h5">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Culpa consequuntur mollitia, recusandae unde maiores praesentium 
-              et! Modi exercitationem optio incidunt ad perferendis repudiandae autem nostrum.
+              TravPen is an initiative intended for a manageable budget. TravPen provides inspiration, advice, 
+              and travel tips from travelers based on a personal experience. 
+              Inspiration for starting TravPen is on my adventurous experience that I would like to share with others as I also get to learn from my fellow travelers.
             </p>
           </div>
           <div>
             <h3>Mission: </h3>
             <p class="mb-2 text-muted h5">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Culpa consequuntur mollitia, recusandae unde maiores praesentium 
-              et! Modi exercitationem optio incidunt ad perferendis repudiandae autem nostrum.
+              To provide premium quality services with an unforgettable experience.
             </p>
           </div>
           <div>
             <h3>Vision: </h3>
             <p class="mb-2 text-muted h5">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Culpa consequuntur mollitia, recusandae unde maiores praesentium 
-              et! Modi exercitationem optio incidunt ad perferendis repudiandae autem nostrum.
+              To become the first choice for customers and the best corporate partner by supporting fellow travelers 
+              on their adventures around the world and facilitating their travel experience. 
             </p>
           </div>
                       
@@ -148,45 +192,77 @@
           <div class="row" >
             <div class="card col-md-3" style="margin:30px;">
               <img class="card-img-top" 
-              src = "https://japan-magazine.jnto.go.jp/jnto2wm/wp-content/uploads/1608_special_TOTO_main.jpg" 
+              src = "./img/maldives.jpeg" 
               height="200px" width="100%">
-              <P>JAPAN</P>
-              <p><a class="button" href="#" role="button">View details</a></p>
+              <br>
+              <h4>MALDIVES</h4>
+              <p><a class="button" href="#" role="button" data-toggle="collapse" data-target="#maldives" aria-expanded="false" aria-controls="maldives">View details</a></p>
+              <p id="maldives">
+                The Maldives is a real paradise for tourists with some of the most luxurious hotels in the world. 
+                It is known for the underwater world, sun-kissed beaches, palm-fringed islands, crystalline lagoons and clean waters. 
+                Maldivian reef is a spot known for hammerhead sharks going for breakfast and you can also swim with whale sharks. 
+                The Maldives is a Muslim country and has embraced its culture linking Maldivian mosques to one of the most popular sights on the islands.
+              </p>
             </div>
             <div class=" card col-md-3" style="margin:30px;">
-              <img class="card-img-top" src = "https://media-cdn.tripadvisor.com/media/photo-s/0e/9a/e3/1d/freedom-tower.jpg" height="200px" width="100%">
-              <p>NEW YORK</p>
-              <p><a class="button" href="#" role="button">View details</a></p>
+              <img class="card-img-top" src = "./img/costarica.jpeg" height="200px" width="100%">
+              <br>
+              <h4>COSTA RICA</h4>
+              <p><a class="button" href="#" role="button" data-toggle="collapse" data-target="#costa" aria-expanded="false" aria-controls="costa">View details</a></p>
+              <p id="costa">
+                Costa Rica has a large number of natural attractions with almost a quarter of the country covered by national reserves. 
+                Despite the small size of Costa Rica, it has various landscapes from humid rainforests to dry landscapes, from high mountains to swampy lowlands. 
+                The country also has active volcanos that are not dangerous to visit and is known for a variety of wildlife, distinct culture and a surplus of adventure activities. 
+              </p>
             </div>
             <div class="card col-md-3" style="margin:30px;">
-              <img class="card-img-top" src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkE7W1ZiBi33L4mHPL0YnBi4S8dWWQmje3c5E1Dq86KAGdkOXtvQ" height="200px" width="100%">
-              <P>CANADA</P>
-              <p><a class="button" href="#" role="button">View details </a></p>
-  
+              <img class="card-img-top" src = "./img/uganda.jpeg" height="200px" width="100%">
+              <br>
+              <h4>UGANDA</h4>
+              <p><a class="button" href="#" role="button" data-toggle="collapse" data-target="#uganda" aria-expanded="false" aria-controls="uganda">View details </a></p>
+              <p id="uganda">
+                Uganda does not have too much tourism activity going on hence can easily be visited on a low budget. Some of the tourist sites in Uganda are Murchison Falls National Park, 
+                Kidepo Valley National Park, Mgahinga Gorilla National Park and Ajai Game Reserve. 
+              </p>
             </div>
           </div>
   
           <div class="row" >
             <div class="card col-md-3" style="margin:30px;">
-              <img class="card-img-top" src = "https://japan-magazine.jnto.go.jp/jnto2wm/wp-content/uploads/1608_special_TOTO_main.jpg" height="200px" width="100%">
+              <img class="card-img-top" src = "./img/fiji.jpeg" height="200px" width="100%">
               <div class="card-body">
-                <P>JAPAN</P>
-                <p><a class="button" href="#" role="button">View details</a></p>
+                <h4>FIJI</h4>
+                <p><a class="button" href="#" role="button" data-toggle="collapse" data-target="#fiji" aria-expanded="false" aria-controls="fiji">View details</a></p>
+                <p id="fiji">
+                  Fiji has interesting hiking activities in the national parks and surfing with big ocean waves. 
+                  This country is known for its volcanic landscape and attractive beaches that give a heavenly atmosphere.
+                  Fiji is made up of 332 islands, located in the Pacific Ocean with only a part of it inhabited.
+                </p>
               </div>
             </div>
             <div class=" card col-md-3" style="margin:30px;">
-              <img class="card-img-top" src = "https://media-cdn.tripadvisor.com/media/photo-s/0e/9a/e3/1d/freedom-tower.jpg" height="200px" width="100%">
-              <p>NEW YORK</p>
-              <p><a class="button" href="#" role="button">View details</a></p>
+              <img class="card-img-top" src = "./img/myan.jpeg" height="200px" width="100%">
+              <br>
+              <h4>MYANMAR</h4>
+              <p><a class="button" href="#" role="button" data-toggle="collapse" data-target="#myan" aria-expanded="false" aria-controls="myan">View details</a></p>
+              <p id="myan">
+                The time to visit this country is during the dry season. 
+                Myanmar country has Inle Lake where local fishing goes on and can be interesting to watch. 
+                Myanmar has perfectly preserved its local traditions and wild nature that you can see.
+              </p>
             </div>
             <div class="card col-md-3" style="margin:30px;">
-              <img class="card-img-top" src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkE7W1ZiBi33L4mHPL0YnBi4S8dWWQmje3c5E1Dq86KAGdkOXtvQ" height="200px" width="100%">
-              <P>CANADA</P>
-              <p><a class="button" href="#" role="button">View details </a></p>
-  
+              <img class="card-img-top" src = "./img/canada.jpeg" height="200px" width="100%">
+              <br>
+              <h4>CANADA</h4>
+              <p><a class="button" href="#" role="button"role="button" data-toggle="collapse" data-target="#ice" aria-expanded="false" aria-controls="ice">View details </a></p>
+              <p id="ice">
+                Iceland offers amazingly dramatic and breath-taking landscapes and exotic natural phenomena and is located close to the Arctic Circle. 
+                Places to visit in Iceland include Reykjavik, Selfoss, Keflavík, Skaftafell, Arnarstapi, and indulge in activities like the geothermal spa at Blue Lagoon, 
+                visit Gullfoss, go on a whale watching tour, witness the northern lights, and more
+              </p>
             </div>
           </div>
-  
   
   <br>
   </div> <!-- /container -->
@@ -207,37 +283,39 @@
         <div class="carousel-item active"style="background-color:black;opacity:0.7;height:400px">
           <div class="carousel-caption">
             <p>"
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis debitis ea asperiores blanditiis 
-              minus dolores rem voluptatum quam impedit eos quae facilis totam quibusdam, deleniti quidem ipsam est labo
-              rum officia ipsum voluptate quas nisi dicta? Eveniet corporis, molestias dolor, natus dolore 
-              ipsam ex optio explicabo quaerat accusantium sunt repellendus! Sequi.
+              Seychelles is a luxury destination that lies in the western part of the Indian Ocean and is known for its exquisite natural beauty, 
+              spectacular beaches, and luxury resorts with its shimmery coastline, smooth white sand beaches, palm-lined shores, and crystal clear waters. 
+              It is home to the world's oldest ocean islands and the largest raised coral atoll. While in Seychelles you can visit Curieuse Island, Aride Island, 
+              Bicentennial Monument, Anse Lazio Beach, Morne Seychellois, and more and engage in activities like snorkeling in Sainte Anne Marine National Park, 
+              and enjoying nature walks in the reserves of Vallée de Mai.
             </p>
-            <h3>Los Angeles</h3>
-            <p>We had such a great time in LA!</p>
+            <h3>Seychelles</h3>
+            <p>We had such a great time in Seychelles!</p>
           </div>
         </div>
         <div class="carousel-item" style="background-color:black;opacity:0.7;height:400px">
           <div class="carousel-caption">
             <p>"
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis debitis ea asperiores blanditiis 
-              minus dolores rem voluptatum quam impedit eos quae facilis totam quibusdam, deleniti quidem ipsam est labo
-              rum officia ipsum voluptate quas nisi dicta? Eveniet corporis, molestias dolor, natus dolore 
-              ipsam ex optio explicabo quaerat accusantium sunt repellendus! Sequi.
+              New Zealand is one of the most scenic and beautiful destinations in the world owing to the grand landscapes. 
+              It is the perfect place for adventure seekers, nature lovers, honeymooners, photographers, birdwatchers, 
+              and those inspired to visit simply by the famous Hollywood movies that were shot here. Sites that you can visit are Queenstown, 
+              Auckland, Rotorua, Christchurch, Wellington with activities like shopping, sandboarding, kayaking, zip-lining, learning about Maori culture, 
+              visiting Glow-worm caves, and wine tasting tour.
             </p>
-            <h3>Chicago</h3>
-            <p>Thank you, Chicago!</p>
+            <h3>New Zealand</h3>
+            <p>Thank you, New Zealand!</p>
           </div>
         </div>
         <div class="carousel-item" style="background-color:black;opacity:0.7;height:400px">
           <div class="carousel-caption">
             <p>"
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis debitis ea asperiores blanditiis 
-              minus dolores rem voluptatum quam impedit eos quae facilis totam quibusdam, deleniti quidem ipsam est labo
-              rum officia ipsum voluptate quas nisi dicta? Eveniet corporis, molestias dolor, natus dolore 
-              ipsam ex optio explicabo quaerat accusantium sunt repellendus! Sequi.
+              Cape Town in South Africa is known for perfect weather in all seasons making it the ideal destination for summer visits. 
+              The town is not crowded and you could benefit from a quality quiet time. The town has sites like Cape Point Nature Reserve, 
+              Signal Hill, Sea Point Swimming Pool, Robben Island Museum and you could enjoy activities like swimming, picnicking, hiking, 
+              watersports, shopping, and food tours.
             </p>
-            <h3>New York</h3>
-            <p>We love the Big Apple!</p>
+            <h3>Cape Town</h3>
+            <p>We love the Cape Town!</p>
           </div>
         </div>
       </div>
@@ -317,6 +395,7 @@
           <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
           <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
           <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+          <script src="./js/index.js"></script>
 <!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 </body>
