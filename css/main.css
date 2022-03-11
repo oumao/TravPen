@@ -27,8 +27,17 @@ section .section-title {
   margin-bottom: 50px;
   text-transform: uppercase;
 }
+
+#aboutus h3 {
+  font-size: 30px;
+}
+#aboutus p {
+  font-size: 20px;
+}
+
 #what-we-do {
   background: #ffffff;
+  font-size: 20px;
 }
 #what-we-do .card {
   padding: 1rem !important;
